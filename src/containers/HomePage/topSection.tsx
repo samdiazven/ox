@@ -42,7 +42,7 @@ const Slogan = styled.h1`
         xl:text-6xl
         sm:text-3xl
         md:text-5xl
-        text-black
+        text-white
         md:font-extrabold
         sm:font-bold
         lg:font-black
@@ -61,7 +61,7 @@ const Description = styled.p`
         sm:max-h-full
         overflow-hidden
         max-h-12
-        text-gray-800
+        text-gray-300
     `}
 `;
 const BlobContainer = styled.div`
@@ -70,7 +70,7 @@ const BlobContainer = styled.div`
 	position: absolute;
 	right: -5em;
 	top: -9em;
-	z-index: -1;
+	z-index: 1;
 	img {
 		width: 100%;
 		height: auto;

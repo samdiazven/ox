@@ -18,7 +18,7 @@ const Title = styled.h2`
 	${tw`
         text-xl
         lg:text-4xl
-        text-black
+        text-white
         font-extrabold
     `}
 `;
@@ -45,7 +45,7 @@ const StepContainer = styled.div`
     `}
 `;
 const Step = styled.div`
-	box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1.3px 12px -3px rgb(245, 245, 245);
 	${tw`
         flex
         rounded-lg
@@ -58,7 +58,7 @@ const Step = styled.div`
 
 const StepTitle = styled.h4`
 	${tw`
-        text-black
+        text-gray-300
         text-lg
         font-semibold
         mt-4
@@ -69,7 +69,7 @@ const StepDescription = styled.p`
         w-10/12
         text-xs
         md:text-sm
-        text-gray-600
+        text-gray-500
         text-center
     `}
 `;

@@ -15,7 +15,7 @@ const NavItem = styled.li<{ menu?: any }>`
 	${tw`
         text-sm
         md:text-base
-        text-black
+        text-white
         font-medium
         mr-1
         md:mr-5

@@ -1,9 +1,13 @@
+import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
-interface ButtonProps {
-	theme: "filled" | "outlined";
+interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
+	theme?: "filled" | "outlined";
 	text: string;
+	className?: string;
+	onClick?: any;
+	submit?: boolean;
 }
 
 const BaseButton = styled.button`
@@ -25,6 +29,7 @@ const BaseButton = styled.button`
         duration-200
         ease-in-out
         m-1
+        mt-2
     `}
 `;
 const OutlinedButton = styled(BaseButton)`
@@ -47,7 +52,25 @@ const FilledButton = styled(BaseButton)`
 `;
 
 export function Button(props: ButtonProps) {
-	const { theme, text } = props;
-	if (theme === "outlined") return <OutlinedButton>{text}</OutlinedButton>;
-	else return <FilledButton>{text}</FilledButton>;
+	const { theme, text, className, onClick, submit } = props;
+	if (theme === "outlined")
+		return (
+			<OutlinedButton
+				className={className}
+				onClick={onClick}
+				type={submit ? "submit" : "button"}
+			>
+				{text}
+			</OutlinedButton>
+		);
+	else
+		return (
+			<FilledButton
+				className={className}
+				onClick={onClick}
+				type={submit ? "submit" : "button"}
+			>
+				{text}
+			</FilledButton>
+		);
 }
