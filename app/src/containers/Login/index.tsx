@@ -40,11 +40,9 @@ const InputContainer = styled.div`
 	width: 100%;
 	margin-top: -10px;
 	color: #fff;
-	@media (min-width: ${SCREENS.sm}) {
-		${tw`
-            mt-4
-        `}
-	}
+	${tw`
+        sm:mt-4
+    `}
 	&:last-of-type {
 		margin-bottom: 1rem;
 	}
@@ -89,9 +87,8 @@ export function Login() {
 					/>
 				</InputContainer>
 				<Button
-					type="submit"
+					submit={true}
 					theme="outlined"
-					onSubmit={() => {}}
 					text="Acceder"
 					className="w-48"
 				/>
