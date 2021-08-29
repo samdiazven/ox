@@ -3,9 +3,11 @@ import tw from "twin.macro";
 import { HomePage } from "./containers/HomePage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Login } from "./containers/Login";
+import { Home } from "./containers/Dashboard/Home";
+import { Library } from "./containers/Dashboard/Library";
 const AppContainer = styled.div`
-	z-index: -1;
-	${tw`
+  z-index: -1;
+  ${tw`
 		w-full
 		h-full
 		flex
@@ -14,16 +16,18 @@ const AppContainer = styled.div`
 	`}
 `;
 function App() {
-	return (
-		<AppContainer>
-			<Router>
-				<Switch>
-					<Route exact path="/" component={HomePage} />
-					<Route exact path="/login" component={Login} />
-				</Switch>
-			</Router>
-		</AppContainer>
-	);
+  return (
+    <AppContainer>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/dashboard" component={Home} />
+          <Route exact path="/library" component={Library} />
+        </Switch>
+      </Router>
+    </AppContainer>
+  );
 }
 
 export default App;
